@@ -2,22 +2,22 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard - Geneksis</title>
-  <style>
-    body { font-family: Arial; background: #fff; padding: 40px; }
-    a { display: block; margin: 10px 0; }
-  </style>
+  <title>Dashboard Geneksis</title>
 </head>
 <body>
-  <h1>📚 Daftar eBook Geneksis</h1>
-  <p><a href="ebooks/buku-filosofi-kopi.pdf" target="_blank">Filosofi Kopi</a></p>
-  <p><a href="ebooks/berani-tidak-disukai.pdf" target="_blank">Berani Tidak Disukai</a></p>
+  <h1>Daftar eBook</h1>
+
+  <ul>
+    <li><a href="../ebooks/filosofi-kopi.pdf" target="_blank">Filosofi Kopi</a></li>
+    <li><a href="../ebooks/berani-tidak-disukai.pdf" target="_blank">Berani Tidak Disukai</a></li>
+    <!-- Tambah buku lain di sini -->
+  </ul>
 
   <button onclick="logout()">Logout</button>
 
   <script>
     if (localStorage.getItem("login") !== "true") {
-      alert("Silakan login dulu!");
+      alert("Kamu harus login dulu!");
       window.location.href = "index.html";
     }
 
