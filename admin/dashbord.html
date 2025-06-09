@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - Geneksis</title>
+  <style>
+    body { font-family: Arial; background: #fff; padding: 40px; }
+    a { display: block; margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>📚 Daftar eBook Geneksis</h1>
+  <p><a href="ebooks/buku-filosofi-kopi.pdf" target="_blank">Filosofi Kopi</a></p>
+  <p><a href="ebooks/berani-tidak-disukai.pdf" target="_blank">Berani Tidak Disukai</a></p>
+
+  <button onclick="logout()">Logout</button>
+
+  <script>
+    if (localStorage.getItem("login") !== "true") {
+      alert("Silakan login dulu!");
+      window.location.href = "index.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("login");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
